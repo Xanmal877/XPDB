@@ -122,8 +122,6 @@ class Quiz(commands.Cog):
         if not channel:
             print(f"Error: Invalid channel ID: {self.data['quiz_channel_id']}")
             return
-
-
         try:
             question = random.choice(self.questions)  # Randomly select a question
             channel.send(f"Selected question: {question['question']}", ephemeral=True, delete_after=10)
